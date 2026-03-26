@@ -1,12 +1,19 @@
 import { useState, useEffect } from 'react';
+import * as React from "react";
 import { Activity, Cloud, CloudRain, Users, TrendingUp, Sun, Moon, CalendarCheck, CheckCircle2, ClipboardCheck, UsersRound, Zap, CalendarDays, Clock, ChefHat, ConciergeBell, Plus, Trash2, AlertTriangle, PiggyBank, CalendarRange, Pencil, LayoutGrid, ArrowRightCircle, Utensils, Boxes, Loader2, Settings2, BookOpen, X, Check, XCircle, ChevronRight, Edit3, ChevronDown, ChevronUp, UserCog, CookingPot, ClipboardList } from 'lucide-react';
+
+// IMPORT CORRETTI (Senza il percorso sbagliato ./components/ui/)
 import { Button } from "./button"
-import { Input } from './components/ui/input';
-import { Label } from './components/ui/label';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from './components/ui/card';
-import { SidebarProvider, SidebarInset, SidebarTrigger } from './components/ui/sidebar';
-import { DashboardSidebar } from './components/dashboard-sidebar';
-import { Separator } from './components/ui/separator';
+import { Input } from './input';
+import { Label } from './label';
+import { Separator } from './separator';
+
+// Questi sono fuori dalla cartella UI, quindi usiamo ../
+import { DashboardSidebar } from '../dashboard-sidebar';
+
+// RIMOZIONE IMPORT DI CARD (Non puoi importare Card dentro Card!)
+// RIMOZIONE IMPORT DI SIDEBAR (Se non sono in questa cartella, usa ../)
+import { SidebarProvider, SidebarInset, SidebarTrigger } from '../ui/sidebar';
 
 
 // ========== ENGINE PREVISIONALE ALEA v2 ==========
